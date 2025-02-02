@@ -1,65 +1,121 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <style>
-        body {
-            background-color: rgb(43, 42, 42);
-        }
-
-        button {
-            font-size: 1em;
-            font-weight: bold;
-            background-color: #4E458C;
-            border: 0px;
-            color: #A9A7D9;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #3d356e;
-            font-weight: bolder;
-            color: white;
-            cursor: pointer;
-            transition-duration: 0.5s;
-        }
-
-        #div1 {
-            text-align: center;
-        }
-
-        #div1 > a > button {
-            width: 150px;
-            height: 100px;
-            margin-left: 10px;
-            margin-top: 10vh;
-            margin-bottom: 10vh;
-        }
-        #div2 {
-            text-align: center;
-        }
-
-        #div2 > a > button {
-            width: 150px;
-            height: 100px;
-            margin-left: 10px;
-            margin-top: 10vh;
-            margin-bottom: 10vh;
-        }
-    </style>
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="div1">
-        <a href="CordelModerno/index.html"><button>Cordel Moderno</button></a>
-        
-        <a href="DesafioAndroid/android.html"><button>Android Page</button></a>
-    </div>
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Victor Hugo Almeida</a>
+            <button class="nav-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#certificacoes">Certificações</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div id="div2">
-        <a href="exVideos/index.html"><button>Exemplo de Videos</button></a>
-    </div>
+    <section class="hero" id="sobre">
+        <img src="/images/eu.JPEG" alt="Eu" class="profile-pic">
+        <h1>Victor Hugo Almeida</h1>
+        <p>Analista de Dados & Desenvolvedor Web</p>
+        <div class="social-links">
+            <a href="https://github.com/VictorHugo56" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/victor-hugo-pereira-almeida-529982239/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:victor.pereira2056@gmail.com"><i class="far fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2 class="section-title">Projetos</h2>
+        <div class="projects-nav">
+            <button data-filter="all" class="active">Todos</button>
+            <button data-filter="analise">Análise de Dados</button>
+            <button data-filter="web">Desenvolvimento Web</button>
+        </div>
+        <div class="grid" id="projects-grid">
+            <!-- Projetos de Análise de Dados -->
+            <div class="card" data-category="analise">
+                <img src="/images/dashboard-log1.png" alt="Dashoboard de Logística">
+                <div class="card-content">
+                    <h3>Dashoboard de Logística</h3>
+                    <p>Dashoboard de Logística com mapa, e filtros.</p>
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYjIyNTVmOGUtM2UxYy00OTk0LWJiYzktNGVmMjk1NTUyYzQ5IiwidCI6IjRjNWJlOWYzLWFhYjYtNGQwOS04NmRjLTE4ODlkZTJlYzIxMCJ9" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
+            <div class="card" data-category="analise">
+                <img src="/api/placeholder/300/200" alt="Projeto de Análise 2">
+                <div class="card-content">
+                    <h3>Análise de Dados 2</h3>
+                    <p>Descrição do projeto de análise de dados.</p>
+                    <a href="#" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
+            <!-- Projetos Web -->
+            <div class="card" data-category="web">
+                <img src="/images/BeautySaloon.png" alt="Site de comércio">
+                <div class="card-content">
+                    <h3>Site de comércio</h3>
+                    <p>Site para um salão de beleza.</p>
+                    <a href="./NLW-Mission-Origin/index.html" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
+            <div class="card" data-category="web">
+                <img src="/images/move-it.png" alt="Projeto de desafios">
+                <div class="card-content">
+                    <h3>Projeto Move It</h3>
+                    <p>Um projeto feito usando <b>React, NextJS, TypeScript.</b> Gera desafios para serem completados, e upar de nível.</p>
+                    <a href="#" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
+            <div class="card" data-category="web">
+                <img src="/images/mario-mini-game.png" alt="Mini Game do Mario">
+                <div class="card-content">
+                    <h3>Mini Game do Mario</h3>
+                    <p>Mini Game Mario feito apenas com <b>HTML, CSS, JS.</b></p>
+                    <a href="./MiniMarioGame/index.html" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificacoes">
+        <h2 class="section-title">Certificações</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="/images/trilha-especializar.png" alt="Especializar RocketSeat">
+                <div class="card-content">
+                    <h3>Trilha Especializar - RocketSeat</h3>
+                    <p>Trilha de especialização aprendendo mais sobre tecnologias como: <b>React - Node - NextJS - TypeScript</b></p>
+                    <a href="#" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/images/trilha-fundamentar.png" alt="Fundamentar RocketSeat">
+                <div class="card-content">
+                    <h3>Trilha Fundamentar - RocketSeat</h3>
+                    <p>Trilha de fundamentar conteúdos aprendendo sobre tecnologias como: <b>HTML - CSS - JS - React - Node - NextJS - TypeScript - SQL...</b></p>
+                    <a href="#" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/images/trilha-conectar.png" alt="Inicialização RocketSeat">
+                <div class="card-content">
+                    <h3>Trilha Conectar - RocketSeat</h3>
+                    <p>Trilha de inicializar os aprendizados sobre programação aprendendo os fundamentos de: <b>HTML - CSS - JS</b></p>
+                    <a href="#" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="script.js"></script>
 </body>
 </html>
